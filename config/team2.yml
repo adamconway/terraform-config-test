@@ -1,0 +1,9 @@
+resource_groups:
+  - name: "team2"
+    version: 1.0.0
+
+storage_accounts:
+  - name: "team2"
+    version: 1.0.0
+    containers:
+      - name: test1
