@@ -15,6 +15,21 @@ module "resource_group_1_0_0" {
   name = each.value.name
 }
 
+module "resource_group_2_0_0" {
+  source = "./modules/resource-group-2.0.0"
+
+  for_each = { for k, value in lookup(local.config, "resource_groups", []) : value.name => value
+    if value.version == "2.0.0"
+  }
+
+  name = each.value.name
+}
+
+moved {
+  from = module.resource_group_1_0_0
+  to   = module.resource_group_2_0_0
+}
+
 ###########################
 ##### Storage Accounts ####
 ###########################

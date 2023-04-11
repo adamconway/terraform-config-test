@@ -1,6 +1,6 @@
 resource_groups:
   - name: "team1"
-    version: 1.0.0
+    version: 2.0.0
 
 storage_accounts:
   - name: "team1"
