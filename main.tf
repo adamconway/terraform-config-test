@@ -25,6 +25,7 @@ module "resource_group_2_0_0" {
   name = each.value.name
 }
 
+# Move a module like this? 
 moved {
   from = module.resource_group_1_0_0
   to   = module.resource_group_2_0_0
